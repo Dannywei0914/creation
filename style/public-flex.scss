@@ -1,0 +1,38 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-al-c {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-jc-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-jc-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+@mixin flex-jc-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-js-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
