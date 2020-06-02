@@ -13,6 +13,11 @@
   align-items: center;
 }
 
+@mixin flex-jc-c {
+  display: flex;
+  justify-content: center;
+}
+
 @mixin flex-jc-left {
   display: flex;
   align-items: center;
