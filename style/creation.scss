@@ -6,28 +6,12 @@ body, html {
 }
 
 .header {
-  width: 100%;
+  width: calc(100% - 20px);
   height: 70px;
-  background-color: rgba(255, 255, 255, .3);
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.8);
   position: absolute;
   z-index: 10;
-
-
-  @include flex-jc-between;
-
-  &-logo {
-    width: 120px;
-    height: 100%;
-    z-index: 10;
-    padding: 0 15px;
-
-    img {
-      width: 60px;
-      border: 5px solid #880;
-      border-radius: 50%;
-    }
-  }
+  padding-right: 20px;
+  @include flex-jc-right;
 
   &-list {
     @include flex-c;
@@ -36,7 +20,7 @@ body, html {
   &-option {
     width: 100px;
     height: 100%;
-    @include flex-c;
+    @include flex-jc-right;
     cursor: pointer;
 
     &-txt {
@@ -69,16 +53,106 @@ body, html {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.homepage {
+  width: 100%;
+  height: 100%;
+  position: relative;
   @include flex-jc-c;
 
-  &-title {
-    color: #fff;
+  &-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;border: 3px solid #440044;
     position: absolute;
-    font-size: 50px;
-    top: 255px;
+    top: 200px
   }
 
-  img {
+  &-title {
+    color: #000;
+    position: absolute;
+    font-size: 50px;
+    top: 350px;
+  }
+
+  &-background {
     width: 100%;
+  }
+
+  &-down {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 650px;
+    border-radius: 50%;
+    cursor: pointer;
+    @include flex-c;
+
+    img {
+      width: 70%;
+    }
+
+    &:hover {
+      opacity: .5;
+      transition: .3s;
+    }
+  }
+}
+
+.footer {
+  width: calc(100% - 100px);
+  height: 300px;
+  background-color: #0089A7;
+
+  padding: 50px 50px;
+
+  &-title {
+    font-size: 30px;
+    color: #FFFFFB;
+  }
+
+  &-list {
+    display: block;
+    margin-top: 50px;
+    @include flex-al-c;
+  }
+
+  &-router {
+    width: 30px;
+    height: 30px;
+    padding: 0 30px;
+
+    &-icon1 {
+      width: 30px;
+      height: 30px;
+    }
+
+    &-txt {
+      font-size: 15px;
+      color: #fff;
+      @include flex-al-c;
+
+      img {
+        padding-right: 10px;
+      }
+    }
+
+  &-icon2 {
+      width: 30px;
+      height: 30px;
+      display: none;
+    }
+
+    &:hover {
+      a>.footer-router-icon1 {
+        display: none;
+      }
+
+      a>.footer-router-icon2 {
+        display: block;
+      }
+    }
   }
 }

@@ -27,7 +27,7 @@
 @mixin flex-jc-right {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 @mixin flex-jc-between {
