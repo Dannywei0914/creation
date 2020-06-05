@@ -341,64 +341,11 @@ body, html {
   padding-top: 100px;
 }
 
-.content .event, .content .works {
+.content .event {
   position: relative;
 }
 
-.content .event-title, .content .works-title {
-  display: block;
-  padding: 0 20px 20px 20px;
-  position: relative;
-  height: 70px;
-}
-
-.content .event-title_top, .content .works-title_top {
-  margin-top: 60px;
-}
-
-.content .event-title-txt, .content .works-title-txt {
-  font-size: 15px;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.content .event-title-txt_big, .content .works-title-txt_big {
-  font-size: 35px;
-  letter-spacing: 3px;
-}
-
-.content .event-title-txt_big:before, .content .works-title-txt_big:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 3px;
-  left: 50%;
-  margin-left: -30px;
-  background: #0089A7;
-}
-
-.content .event-title-txt_big:after, .content .works-title-txt_big:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 3px;
-  right: 50%;
-  margin-right: -30px;
-  background: #00AA90;
-}
-
-.content .event-title-txt_border:before, .content .works-title-txt_border:before {
-  left: auto;
-  top: -25px;
-}
-
-.content .event-title-txt_border:after, .content .works-title-txt_border:after {
-  right: auto;
-}
-
-.content .event-list, .content .works-list {
+.content .event-list {
   width: calc(100% - 200px);
   padding: 10px 0;
   border-top: 3px solid #fff;
@@ -415,12 +362,12 @@ body, html {
           justify-content: space-between;
 }
 
-.content .event-option, .content .works-option {
+.content .event-option {
   margin: 10px;
   cursor: pointer;
 }
 
-.content .event-option-txt, .content .works-option-txt {
+.content .event-option-txt {
   font-size: 15px;
   color: #000;
   white-space: nowrap;
@@ -428,13 +375,66 @@ body, html {
   text-overflow: ellipsis;
 }
 
-.content .event-option-txt:before, .content .works-option-txt:before {
+.content .event-option-txt:before {
   content: "#";
   color: #0089A7;
 }
 
-.content .event-option:hover p, .content .works-option:hover p {
+.content .event-option:hover p {
   color: #0089A7;
+}
+
+.content .title {
+  display: block;
+  padding: 0 20px 20px 20px;
+  position: relative;
+  height: 70px;
+}
+
+.content .title_top {
+  margin-top: 60px;
+}
+
+.content .title-txt {
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.content .title-txt_big {
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.content .title-txt_big:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  left: 50%;
+  margin-left: -30px;
+  background: #0089A7;
+}
+
+.content .title-txt_big:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  right: 50%;
+  margin-right: -30px;
+  background: #00AA90;
+}
+
+.content .title-txt_border:before {
+  left: auto;
+  top: -25px;
+}
+
+.content .title-txt_border:after {
+  right: auto;
 }
 
 .content .all-btn {
@@ -693,6 +693,94 @@ body, html {
   font-size: 20px;
   color: #0089A7;
   padding: 0 3px;
+}
+
+.content .works {
+  position: relative;
+}
+
+.content .works-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.content .works-list::before {
+  display: table;
+}
+
+.content .works-list-box {
+  background: #fff;
+  border-bottom: 2px solid #0089A7;
+  position: relative;
+  width: 500px;
+  margin: 0 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.content .works-list-box a {
+  color: #000;
+}
+
+.content .works-list-box a .default {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.content .works-list-box a .default img {
+  line-height: 1;
+  font-size: 0;
+  height: 300px;
+  width: 500px;
+}
+
+.content .works-list-box a .hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.content .works-list-box a .hover img {
+  line-height: 1;
+  font-size: 0;
+  height: 300px;
+  width: 500px;
+}
+
+.content .works-list-box a .text-box {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.content .works-list-box a .text-box-content {
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.content .works-list-box a .text-box-txt {
+  font-size: 15px;
+  color: #636363;
+}
+
+.content .works-list-box:hover a .default {
+  opacity: 0;
+}
+
+.content .works-list-box:hover a .hover {
+  opacity: 1;
 }
 
 @-webkit-keyframes testHeightBorder {
