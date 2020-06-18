@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/icons/hexagon.png":[["hexagon.21ff7195.png","images/icons/hexagon.png"],"images/icons/hexagon.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/icons/download-white.svg":[["download-white.220b43ea.svg","images/icons/download-white.svg"],"images/icons/download-white.svg"],"./../images/coffe1.jpg":[["coffe1.2c959ea2.jpg","images/coffe1.jpg"],"images/coffe1.jpg"],"./../images/pexels-photo-402028.jpg":[["pexels-photo-402028.8555ea9b.jpg","images/pexels-photo-402028.jpg"],"images/pexels-photo-402028.jpg"],"./../images/icons/hexagon.png":[["hexagon.21ff7195.png","images/icons/hexagon.png"],"images/icons/hexagon.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58653" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
