@@ -8,6 +8,5 @@ $(document).ready(function() {
   window.setInterval(() => {
     img1.toggleClass('sliders-option_show');
     img2.toggleClass('sliders-option_show');
-    
   }, 5000);
 })
