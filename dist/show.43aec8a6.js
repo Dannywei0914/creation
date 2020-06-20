@@ -11210,21 +11210,25 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-window.$ = window.jQuery = _jquery.default;
-$(document).ready(function () {
-  var img1 = $('#img1');
-  var img2 = $('#img2');
-  var icon = $('#icon');
-  console.log($('.body'));
+(0, _jquery.default)(document).ready(function () {
+  var img1 = (0, _jquery.default)('#img1');
+  var img2 = (0, _jquery.default)('#img2');
   window.setInterval(function () {
     img1.toggleClass('sliders-option_show');
     img2.toggleClass('sliders-option_show');
   }, 5000);
-  $('#icon').click(function () {
+  (0, _jquery.default)('#icon').click(function () {
     window.scrollTo({
-      top: $('.body').get(0).offsetTop,
+      top: (0, _jquery.default)('.body').get(0).offsetTop,
       behavior: 'smooth'
     });
+  });
+  window.addEventListener('scroll', function () {
+    if (window.scrollY !== 0) {
+      (0, _jquery.default)('.nav').addClass('nav_bgcolor');
+    } else {
+      (0, _jquery.default)('.nav').removeClass('nav_bgcolor');
+    }
   });
 });
 },{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -11255,7 +11259,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54372" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52039" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

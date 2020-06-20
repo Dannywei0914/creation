@@ -1,15 +1,8 @@
-import jquery from "jquery";
-
-window.$ = window.jQuery = jquery;
-
-
+import $ from "jquery";
 
 $(document).ready(function() {
   var img1 = $('#img1');
   var img2 = $('#img2');
-  var icon = $('#icon');
-  console.log($('.body'))
-
 
   window.setInterval(() => {
     img1.toggleClass('sliders-option_show');
@@ -20,5 +13,14 @@ $(document).ready(function() {
     window.scrollTo({
       top: $('.body').get(0).offsetTop,
       behavior: 'smooth',
-    })  })
+    })  
+  })
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY !== 0) {
+      $('.nav').addClass('nav_bgcolor')
+    } else {
+      $('.nav').removeClass('nav_bgcolor')
+    }
+  })
 })

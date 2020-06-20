@@ -11,6 +11,59 @@ body, html {
   display: block;
 }
 
+.header .nav {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 100px;
+  height: 50px;
+  width: calc(100% - 200px);
+  z-index: 999;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header .nav_bgcolor {
+  background-color: #0089A7;
+}
+
+.header .nav-logo {
+  width: 100px;
+  padding: 13px 0;
+}
+
+.header .nav-name {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+
+.header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 320px;
+}
+
+.header .nav-option {
+  padding: 0 20px;
+}
+
 .header .fullscreen {
   height: 100%;
   width: 100%;
