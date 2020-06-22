@@ -32,18 +32,41 @@ body, html {
 
     &-name {
       font-size: 24px;
-      color: #000;
+      color: #fff;
       font-weight: bold;
+      text-shadow: black 0.1em 0.1em 0.2em;
     }
 
     &-list {
-      @include flex-c;
+      @include flex-jc-between;
       height: 100%;
       width: 320px;
     }
 
     &-option {
-      padding: 0 20px;
+      margin: 0 20px;
+      position: relative;
+      cursor: pointer;
+      color: #fff;
+      text-shadow: black 0.1em 0.1em 0.2em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        transform: scalex(0);
+        transition: all .3s ease;
+      }
+
+      &:hover {
+        &::before {
+          transform: scalex(1);
+        }
+      }
     }
 
     
@@ -128,79 +151,194 @@ body, html {
     }
 
     .img-1 {
-      background-image: url("../images/coffe1.jpg");
+      background-image: url("../images/life/IMG_6218.JPG");
     }
 
     .img-2 {
-      background-image: url("../images/pexels-photo-402028.jpg");
+      background-image: url("../images/life/IMG_9527.JPG");
     }
 
     &-textbox {
       position: absolute;
-      top: 200px;
+      top: 150px;
       left: 100px;
       opacity: 0;
       transition: .6s;
     }
 
     &-txt {
-      color: #000;
+      color: #fff;
       font-size: 30px;
       padding-bottom: 10px;
+      text-shadow: black 0.1em 0.1em 0.2em;
 
       &_bold {
-        color: 40px;
+        font-size: 40px;
         font-weight: bold;
       }
     }
   }
-  // width: calc(100% - 20px);
-  // height: 70px;
-  // position: absolute;
-  // z-index: 10;
-  // padding-right: 20px;
-  // @include flex-jc-right;
-  
-
-  // &-list {
-  //   @include flex-c;
-  // }
-
-  // &-option {
-  //   width: 100px;
-  //   height: 100%;
-  //   @include flex-jc-right;
-  //   cursor: pointer;
-
-  //   &-txt {
-  //     display: block;
-  //     position: relative;
-  //     color: #fff;
-
-  //     &::before {
-  //       content: "";
-  //       position: absolute;
-  //       left: 0;
-  //       bottom: -5px;
-  //       width: 100%;
-  //       height: 1px;
-  //       background-color: #000;
-  //       transform: scalex(0);
-  //       transition: all .3s ease;
-  //     }
-      
-  //     &:hover {
-  //       &::before {
-  //         transform: scalex(1);
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .body {
   width: 100%;
   position: relative;
+}
+
+.about {
+  padding: 50px 100px;
+  width: calc(100% - 200px);
+  height: 500px;
+  @include flex-c;
+  position: relative;
+
+  &_show {
+    .about-content {
+      left: 100px;
+      opacity: 1;
+    }
+
+    .about-img {
+      opacity: 1;
+      right: 100px;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    display: block;
+    left: -500px;
+    opacity: 0;
+    transition: .6s;
+    width: calc(100% - 500px);
+
+    &-title {
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    &-txt {
+      padding: 30px;
+      line-height: 18px;
+    }
+  }
+
+  &-img {
+    display: block;
+    position: absolute;
+    right: -500px;
+    opacity: 0;
+    transition: .6s;
+
+    &:before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: -28px;
+      top: -28px;
+      border: 6px solid #0089A7;
+      opacity: .5;
+    }
+
+    &:after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: -28px;
+      bottom: -28px;
+      border: 6px solid #0089A7;
+      opacity: .5;
+    }
+
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+.experience {
+  padding: 50px 100px;
+  width: calc(100% - 200px);
+  @include flex-c;
+  position: relative;
+  height: 500px;
+
+  &_show {
+    .experience-content {
+      right: 50px;
+      opacity: 1;
+    }
+
+    .experience-img {
+      opacity: 1;
+      left: 100px;
+    }
+  }
+
+  &-content {
+    display: block;
+    right: -500px;
+    opacity: 0;
+    transition: .6s;
+    width: calc(100% - 500px);
+    position: absolute;
+
+    &-title {
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
+
+      &_little {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 10px 0;
+      }
+    }
+
+    &-txt {
+      padding: 30px;
+      line-height: 18px;
+    }
+  }
+
+  &-img {
+    display: block;
+    position: absolute;
+    left: -500px;
+    opacity: 0;
+    transition: .6s;
+
+    &:before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: -28px;
+      top: -28px;
+      border: 6px solid #0089A7;
+      opacity: .5;
+    }
+
+    &:after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: -28px;
+      bottom: -28px;
+      border: 6px solid #0089A7;
+      opacity: .5;
+    }
+
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
 }
 
 .footer {
@@ -262,88 +400,88 @@ body, html {
   }
 }
 
-.news {
-  width: calc(100% - 100px);
-  padding: 20px 50px;
-  @include flex-jc-c;
+// .news {
+//   width: calc(100% - 100px);
+//   padding: 20px 50px;
+//   @include flex-jc-c;
 
-  &-title {
-    font-size: 25px;
-    font-weight: 400;
-    font-family: "Josefin Sans",sans-serif;
-    text-transform: uppercase;
-    border-right: 1px solid #111;
-    margin-right: 30px;
-    padding: 10px 30px;
-    line-height: 1;
-  }
+//   &-title {
+//     font-size: 25px;
+//     font-weight: 400;
+//     font-family: "Josefin Sans",sans-serif;
+//     text-transform: uppercase;
+//     border-right: 1px solid #111;
+//     margin-right: 30px;
+//     padding: 10px 30px;
+//     line-height: 1;
+//   }
 
-  &-menu {
-    padding: 10px 15px 10px 15px;
-    background-color: #000;
-    cursor: pointer;
-    @include flex-al-c;
+//   &-menu {
+//     padding: 10px 15px 10px 15px;
+//     background-color: #000;
+//     cursor: pointer;
+//     @include flex-al-c;
 
-    &:hover {
-      background-color: #0089A7;
-    }
+//     &:hover {
+//       background-color: #0089A7;
+//     }
 
-    img {
-      width: 15px;
-      height: 15px;
-    }
-  }
+//     img {
+//       width: 15px;
+//       height: 15px;
+//     }
+//   }
 
-  &-slider {
-    line-height: 25px;
-    padding: 10px 10px 10px 10px;
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
+//   &-slider {
+//     line-height: 25px;
+//     padding: 10px 10px 10px 10px;
+//     background-color: #000;
+//     color: #fff;
+//     cursor: pointer;
     
-    &_next {
-      left: 30px;
-    }
+//     &_next {
+//       left: 30px;
+//     }
 
-    &:hover {
-      background-color: #0089A7;
-    }
-  }
+//     &:hover {
+//       background-color: #0089A7;
+//     }
+//   }
 
-  &-bar {
-    width: 700px;
-    @include flex-c;
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-  }
+//   &-bar {
+//     width: 700px;
+//     @include flex-c;
+//     position: relative;
+//     display: block;
+//     box-sizing: border-box;
+//   }
 
-  &-option {
-    padding: 10px 15px;
-    @include flex-al-c;
-    line-height: 25px;
+//   &-option {
+//     padding: 10px 15px;
+//     @include flex-al-c;
+//     line-height: 25px;
 
-    &-txt {
-      cursor: pointer;
-      padding: 0 10px;
-      font-size: 15px;
-      color: #000;
-      font-family: "Josefin Sans",sans-serif;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      min-width: 10%;
+//     &-txt {
+//       cursor: pointer;
+//       padding: 0 10px;
+//       font-size: 15px;
+//       color: #000;
+//       font-family: "Josefin Sans",sans-serif;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//       white-space: nowrap;
+//       min-width: 10%;
 
-      &:hover {
-        color: #0089A7;
-      }
+//       &:hover {
+//         color: #0089A7;
+//       }
 
-      &_date {
-        color: #0089A7;
-      }
-    }
-  }
-}
+//       &_date {
+//         color: #0089A7;
+//       }
+//     }
+//   }
+// }
 
 .blog {
   width: calc(100% - 100px);

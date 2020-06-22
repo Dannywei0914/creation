@@ -22,5 +22,17 @@ $(document).ready(function() {
     } else {
       $('.nav').removeClass('nav_bgcolor')
     }
+
+    if (window.scrollY > ($('.sliders').get(0).offsetHeight) / 2) {
+      $('.about').addClass('about_show')
+    } else {
+      $('.about').removeClass('about_show')
+    }
+
+    if (window.scrollY > ($('.body').get(0).offsetTop) + ($('.about').get(0).offsetHeight / 2)) {
+      $('.experience').addClass('experience_show')
+    } else {
+      $('.experience').removeClass('experience_show')
+    }
   })
 })
