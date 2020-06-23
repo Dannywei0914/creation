@@ -30,6 +30,7 @@
     }
   },
   "dependencies": {
+    "flexslider": "^2.7.2",
     "jquery": "^3.5.1",
     "reset-css": "^5.0.1",
     "sweetalert2": "^9.14.0"

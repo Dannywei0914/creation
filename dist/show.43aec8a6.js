@@ -11217,6 +11217,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     img1.toggleClass('sliders-option_show');
     img2.toggleClass('sliders-option_show');
   }, 5000);
+  (0, _jquery.default)('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5
+  });
   (0, _jquery.default)('#icon').click(function () {
     window.scrollTo({
       top: (0, _jquery.default)('.body').get(0).offsetTop,
@@ -11271,7 +11277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58644" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51849" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
