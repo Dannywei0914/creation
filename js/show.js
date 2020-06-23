@@ -9,12 +9,12 @@ $(document).ready(function() {
     img2.toggleClass('sliders-option_show');
   }, 5000);
 
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 210,
-    itemMargin: 5
-  });
+  // $('.flexslider').flexslider({
+  //   animation: "slide",
+  //   animationLoop: false,
+  //   itemWidth: 210,
+  //   itemMargin: 5
+  // });
 
   $('#icon').click(function () {
     window.scrollTo({
