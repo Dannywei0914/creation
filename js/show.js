@@ -1,24 +1,39 @@
 import $ from "jquery";
+import "../style/slick/slick";
 
 $(document).ready(function() {
   var img1 = $('#img1');
   var img2 = $('#img2');
+
+  $('.regular').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  });
 
   window.setInterval(() => {
     img1.toggleClass('sliders-option_show');
     img2.toggleClass('sliders-option_show');
   }, 5000);
 
-  // $('.flexslider').flexslider({
-  //   animation: "slide",
-  //   animationLoop: false,
-  //   itemWidth: 210,
-  //   itemMargin: 5
-  // });
-
   $('#icon').click(function () {
     window.scrollTo({
       top: $('.body').get(0).offsetTop,
+      behavior: 'smooth',
+    })  
+  })
+
+  $('#about').click(function () {
+    window.scrollTo({
+      top: $('.body').get(0).offsetTop,
+      behavior: 'smooth',
+    })  
+  })
+
+  $('#skills').click(function () {
+    window.scrollTo({
+      top: $('#event').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight,
       behavior: 'smooth',
     })  
   })

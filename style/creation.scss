@@ -265,7 +265,7 @@ body, html {
   width: calc(100% - 200px);
   @include flex-c;
   position: relative;
-  height: 500px;
+  height: 1000px;
 
   &_show {
     .experience-content {
@@ -300,8 +300,23 @@ body, html {
     }
 
     &-txt {
-      padding: 30px;
-      line-height: 18px;
+      line-height: 25px;
+      padding: 10px 10px;
+      display: block;
+
+      &_title {
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 0;
+      }
+
+      &_left {
+        padding: 10px 25px;
+      }
+    }
+
+    &-list {
+      padding: 0 20px;
     }
   }
 
@@ -339,6 +354,39 @@ body, html {
       height: 400px;
     }
   }
+}
+
+.slider {
+  width: 50%;
+  margin: 50px auto !important;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100px;
+  height: 100px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: .5;
+}
+
+.slick-current {
+  opacity: 1;
 }
 
 .footer {

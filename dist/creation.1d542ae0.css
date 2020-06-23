@@ -304,7 +304,7 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  height: 500px;
+  height: 1000px;
 }
 
 .experience_show .experience-content {
@@ -340,8 +340,23 @@ body, html {
 }
 
 .experience-content-txt {
-  padding: 30px;
-  line-height: 18px;
+  line-height: 25px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.experience-content-txt_title {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.experience-content-txt_left {
+  padding: 10px 25px;
+}
+
+.experience-content-list {
+  padding: 0 20px;
 }
 
 .experience-img {
@@ -378,6 +393,39 @@ body, html {
 .experience-img img {
   width: 300px;
   height: 400px;
+}
+
+.slider {
+  width: 50%;
+  margin: 50px auto !important;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100px;
+  height: 100px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: .5;
+}
+
+.slick-current {
+  opacity: 1;
 }
 
 .footer {

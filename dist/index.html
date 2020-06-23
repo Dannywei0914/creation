@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/reset.8f26026f.css">
+  <link rel="stylesheet" type="text/css" href="/slick.674297f7.css">
+  <link rel="stylesheet" type="text/css" href="/slick-theme.5d43a8d4.css">
   <link rel="stylesheet" href="/creation.1d542ae0.css">
-  <link rel="stylesheet" href="/flexslider.f629ee11.css">
   <script src="/show.43aec8a6.js"></script>
   <title>Document</title>
-<script src="/reset.8f26026f.js"></script><script src="/creation.1d542ae0.js"></script><script src="/flexslider.f629ee11.js"></script></head>
+<script src="/reset.8f26026f.js"></script><script src="/slick.674297f7.js"></script><script src="/slick-theme.5d43a8d4.js"></script><script src="/creation.1d542ae0.js"></script></head>
 <body>
   <header class="header">
     <div class="nav">
@@ -16,8 +17,8 @@
         <h1 class="nav-name">Danny</h1>
       </div>
       <ul class="nav-list">
-        <li class="nav-option">關於我</li>
-        <li class="nav-option">我的技能</li>
+        <li class="nav-option" id="about">關於我</li>
+        <li class="nav-option" id="skills">我的技能</li>
         <li class="nav-option">我的作品</li>
       </ul>
     </div>
@@ -74,58 +75,84 @@
           前端開發工程師 2018/7~2020/5 1年11個月
         </p>
         <p class="experience-content-txt">          
-          1.各系統的彈跳視窗開發
-        </p>
-        <p class="experience-content-txt">          
-          2.showcase電子零件設計仲介平台介面開發
-        </p>
-        <p class="experience-content-txt">          
-          3.portal員工資料管理系統
-        </p>
-        <p class="experience-content-txt">          
-          4.portal人事資料管理系統
-        </p>
-        <p class="experience-content-txt">          
-          5.portal報導前置作業系統
-        </p>
-        <p class="experience-content-txt">          
-          6.portal部門工作日誌系統
-        </p>
-        <p class="experience-content-txt">          
-          6.部門的零件資料統計平台
-        </p>
-        <p class="experience-content-txt">          
-          7.系統的報表顯示管理平台
-        </p>
-        <p class="experience-content-txt">          
-          8.garage 零件資料比對系統平台
-        </p>
-        <p class="experience-content-txt">          
           網頁介面的前端開發，前期介面開發，後期專研Angular框架，並實用在兩個專案上，並與組員使用git版本控管管理專案並使用slack溝通，與後端配合API資料介接，與PM、設計人員談論需求．
         </p>
-        <!-- <span class="experience-content-title">自我學習</span>
-        <p class="experience-content-txt">
-          由於喜歡程式開發，所以會在空檔時去討論區或讀書會查看有沒有新的工具與知識，希望能持續增進自己的知識量並熟練多樣工具。
-          對日本與美國的文化與運動充滿興趣，所以希望能學會日語及英語，讓自己有流利的語法，能到國外見識更多文化並且讓自己有更多的發展機會。
-        </p> -->
+        <ul class="experience-content-list">
+          <ol class="">
+            <span class="experience-content-txt experience-content-txt_title">          
+              Angular框架開發，API資料介接，前後端分離
+            </span>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                1.garage零件資料比對系統平台
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">
+                提供平台做零件資料上傳、比對、下載，有使用者權限和使用socket.io連接後端做追蹤訊息         
+              </p>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                2.員工資料管理系統
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">          
+                提供員工管理個人資訊的一個平台
+              </p>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                3.人事資料管理系統
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">          
+                提供給人資部門管理員工資訊的平台
+              </p>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                4.報到前置作業系統
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">          
+                提供給進入公司工作的新人填寫資料報到的平台
+              </p>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                5.部門工作日誌系統
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">          
+                提供給其他部門專用日誌平台
+              </p>
+            </li>
+          </ol>
+          <ol class="">
+            <p class="experience-content-txt experience-content-txt_title">          
+              介面開發，前後端配合
+            </p>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                1.各系統的彈跳視窗開發
+              </span>
+              <p class="experience-content-txt experience-content-txt_left">          
+                功能彈窗介面開發與維護
+              </p>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                2.showcase電子零件設計仲介平台與零件管理平台介面開發
+              </span>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                3.部門的零件資料統計平台
+              </span>
+            </li>
+            <li class="experience-content-item">
+              <span class="experience-content-txt">          
+                4.系統的報表顯示管理平台
+              </span>
+            </li>
+          </ol>
+        </ul>
       </div>
-    </div>
-    <div class="flexslider carousel">
-      <ul class="slides">
-        <li>
-          <img src="/pexels-photo-347145.175daee3.jpg">
-        </li>
-        <li>
-          <img src="/pexels-photo-402028.8555ea9b.jpg">
-        </li>
-        <li>
-          <img src="/pexels-photo-634009.3d0c778a.jpg">
-        </li>
-        <li>
-          <img src="/sunrise-sunset_XSTO5645BM.18b16449.jpg">
-        </li>
-        <!-- items mirrored twice, total of 12 -->
-      </ul>
     </div>
     <!-- <div class="news">
       <h2 class="news-title">
@@ -148,13 +175,13 @@
       <li class="blog-item"></li>
       <li class="blog-item"></li>
     </ul> -->
-    <div class="content">
+    <div class="content" id="event">
       <div class="event">
         <div class="title">
           <p class="title-txt">技能</p>
           <h2 class="title-txt title-txt_big">專業技術</h2>
         </div>
-        <ul class="event-list">
+        <!-- <ul class="event-list">
           <li class="event-option">
             <p class="event-option-txt">オンライン</p>
           </li>
@@ -176,17 +203,16 @@
           <li class="event-option">
             <p class="event-option-txt">OB様限定イベント</p>
           </li>
-        </ul>
-        <div class="all-btn"><a href=""><span>VIEW ALL</span></a></div>
+        </ul> -->
+        <!-- <div class="all-btn"><a href=""><span>VIEW ALL</span></a></div> -->
       </div>
-      
-      <div class="row">
+      <!-- <div class="row">
         <div class="event-box">
           <a href="">
             <div class="thumb">
               <span class="new">受付中</span>
               <div class="mask">
-                <img src="/coffe1.2c959ea2.jpg" alt="">
+                <img src="./images/coffe1.jpg" alt="">
               </div>
               <sapn class="cat">完成內覽會</sapn>
             </div>
@@ -206,7 +232,7 @@
             <div class="thumb">
               <span class="new">受付中</span>
               <div class="mask">
-                <img src="/coffe1.2c959ea2.jpg" alt="">
+                <img src="./images/coffe1.jpg" alt="">
               </div>
               <sapn class="cat">完成內覽會</sapn>
             </div>
@@ -226,7 +252,7 @@
             <div class="thumb">
               <span class="new">受付中</span>
               <div class="mask">
-                <img src="/coffe1.2c959ea2.jpg" alt="">
+                <img src="./images/coffe1.jpg" alt="">
               </div>
               <sapn class="cat">完成內覽會</sapn>
             </div>
@@ -241,11 +267,38 @@
             <p class="event-box-txt">和歌山市作事丁</p>
           </a>
         </div>
-      </div>
+      </div> -->
+      <section class="regular slider">
+        <div>
+          <img src="/angular.338ccfda.png">
+        </div>
+        <div>
+          <img src="/html.77115fe1.png">
+        </div>
+        <div>
+          <img src="/sass.b6734ba5.png">
+        </div>
+        <div>
+          <img src="/js.175516bd.png">
+        </div>
+        <div>
+          <img src="/ts.f85b7742.png">
+        </div>
+        <div>
+          <img src="/git-cover.d9fc3aaf.png">
+        </div>
+        <div>
+          <img src="/vscode_icon.81843b21.png">
+        </div>
+        <div>
+          <img src="/slack.545c92ee.jpeg">
+        </div>
+      </section>
       <div class="works">
         <div class="title title_top">
-          <p class="title-txt">イベント情報</p>
-          <h2 class="title-txt title-txt_big title-txt_border">EVENT</h2>
+          <h2 class="title-txt title-txt_big title-txt_border">
+            我的作品
+          </h2>
         </div>
         <div class="all-btn"><a href=""><span>VIEW ALL</span></a></div>
         <div class="works-list">
