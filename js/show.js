@@ -1,5 +1,5 @@
 import $ from "jquery";
-import "../style/slick/slick";
+import "slick-carousel";
 
 $(document).ready(function() {
   var img1 = $('#img1');
