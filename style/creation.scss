@@ -284,7 +284,7 @@ body, html {
     right: -500px;
     opacity: 0;
     transition: .6s;
-    width: calc(100% - 500px);
+    width: calc(100% - 600px);
     position: absolute;
 
     &-title {
@@ -350,7 +350,7 @@ body, html {
     }
 
     img {
-      width: 300px;
+      width: 400px;
       height: 400px;
     }
   }
@@ -359,6 +359,10 @@ body, html {
 .slider {
   width: 50%;
   margin: 50px auto !important;
+}
+
+.slick-track {
+  padding-bottom: 30px;
 }
 
 .slick-slide {
@@ -382,7 +386,7 @@ body, html {
 }
 
 .slick-active {
-  opacity: .5;
+  opacity: 1 !important ;
 }
 
 .slick-current {
@@ -448,89 +452,6 @@ body, html {
   }
 }
 
-// .news {
-//   width: calc(100% - 100px);
-//   padding: 20px 50px;
-//   @include flex-jc-c;
-
-//   &-title {
-//     font-size: 25px;
-//     font-weight: 400;
-//     font-family: "Josefin Sans",sans-serif;
-//     text-transform: uppercase;
-//     border-right: 1px solid #111;
-//     margin-right: 30px;
-//     padding: 10px 30px;
-//     line-height: 1;
-//   }
-
-//   &-menu {
-//     padding: 10px 15px 10px 15px;
-//     background-color: #000;
-//     cursor: pointer;
-//     @include flex-al-c;
-
-//     &:hover {
-//       background-color: #0089A7;
-//     }
-
-//     img {
-//       width: 15px;
-//       height: 15px;
-//     }
-//   }
-
-//   &-slider {
-//     line-height: 25px;
-//     padding: 10px 10px 10px 10px;
-//     background-color: #000;
-//     color: #fff;
-//     cursor: pointer;
-    
-//     &_next {
-//       left: 30px;
-//     }
-
-//     &:hover {
-//       background-color: #0089A7;
-//     }
-//   }
-
-//   &-bar {
-//     width: 700px;
-//     @include flex-c;
-//     position: relative;
-//     display: block;
-//     box-sizing: border-box;
-//   }
-
-//   &-option {
-//     padding: 10px 15px;
-//     @include flex-al-c;
-//     line-height: 25px;
-
-//     &-txt {
-//       cursor: pointer;
-//       padding: 0 10px;
-//       font-size: 15px;
-//       color: #000;
-//       font-family: "Josefin Sans",sans-serif;
-//       overflow: hidden;
-//       text-overflow: ellipsis;
-//       white-space: nowrap;
-//       min-width: 10%;
-
-//       &:hover {
-//         color: #0089A7;
-//       }
-
-//       &_date {
-//         color: #0089A7;
-//       }
-//     }
-//   }
-// }
-
 .blog {
   width: calc(100% - 100px);
   @include flex-jc-around;
@@ -544,104 +465,14 @@ body, html {
   }
 }
 
-.content {
+.skill {
   width: 100%;
   position: relative;
   background-color: #f5f5f5;
-  padding-top: 100px;
+  padding:100px 0;
 
   .event {
     position: relative;
-
-    &-list {
-      width: calc(100% - 200px);
-      padding: 10px 0;
-      border-top: 3px solid #fff;
-      border-bottom: 3px solid #fff;
-      margin: 20px 100px;
-      @include flex-jc-between;
-  
-      
-    }
-  
-    &-option {
-      margin: 10px;
-      cursor: pointer;
-  
-      &-txt {
-        font-size: 15px;
-        color: #000;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-  
-        &:before {
-          content: "#";
-          color: #0089A7;
-        }
-      }
-  
-      &:hover {
-        p {
-          color: #0089A7;
-        }
-      }
-    }
-  }
-
-  .title {
-    display: block;
-    padding: 0 20px 20px 20px;
-    position: relative;
-    height: 70px;
-
-    &_top {
-      margin-top: 60px;
-    }
-
-    &-txt {
-      font-size: 15px;
-      text-align: center;
-      padding-bottom: 10px;
-
-      &_big {
-        font-size: 35px;
-        letter-spacing: 3px;
-
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: 40px;
-          height: 3px;
-          left: 50%;
-          margin-left: -30px;
-          background: #0089A7;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: 40px;
-          height: 3px;
-          right: 50%;
-          margin-right: -30px;
-          background: #00AA90;
-        }
-      }
-
-      &_border {
-        &:before {
-          left: auto;
-          top: -25px;
-        }
-
-        &:after {
-          right: auto;
-        }
-      }
-    }
   }
 
   .all-btn {
@@ -740,218 +571,135 @@ body, html {
       }
     }
   }
+}
 
-  .row {
-    padding: 0 85px;
-    margin-bottom: 30px;
-    @include flex-jc-between;
-    
-    .event-box {
-      height: 450px;
-      width: 300px;
-      position: relative;
-      margin: 20px;
-      margin-bottom: 20px;
-      box-sizing: border-box;
-      flex: 0 0 auto;
-  
+.title {
+  display: block;
+  padding: 0 20px 20px 20px;
+  position: relative;
+  height: 70px;
+
+  &-txt {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+
+    &_big {
+      font-size: 35px;
+      letter-spacing: 3px;
+
       &:before {
         content: "";
         position: absolute;
         bottom: 0;
-        width: 50%;
-        height: 1px;
+        width: 40px;
+        height: 3px;
         left: 50%;
-        margin-left: -50%;
+        margin-left: -30px;
         background: #0089A7;
       }
-  
+
       &:after {
         content: "";
         position: absolute;
         bottom: 0;
-        width: 50%;
-        height: 1px;
+        width: 40px;
+        height: 3px;
         right: 50%;
-        margin-right: -50%;
-        background: #cd4a38;
+        margin-right: -30px;
+        background: #00AA90;
+      }
+    }
+
+    &_border {
+      &:before {
+        left: auto;
+        top: -25px;
       }
 
-      a {
-        color: #000;
-        text-decoration: none;
-
-        h3 {
-          padding: 20px 0px;
-          font-size: 15px;
-          font-weight: 500;
-        }
-
-        .event-box-txt {
-          font-size: 15px;
-          color: #636363;
-        }
-
-        .thumb {
-          position: relative;
-          margin-bottom: 20px;
-          text-align: center;
-
-          .new {
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            background: #0089A7;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            z-index: 10;
-            font-size: 14px;
-
-            &:after {
-              content: "";
-              position: absolute;
-              left: -4px;
-              top: -4px;
-              width: 64px;
-              height: 64px;
-              border-radius: 50%;
-              border: 2px solid #0089A7;
-            }
-          }
-
-          .mask {
-            width: 300px;
-            height: 256px;
-            margin: 0 auto;
-            
-            mask: url(../images/icons/hexagon.png) no-repeat top center;
-            background-size: contain;
-
-            img {
-              width: 400px;
-              line-height: 1;
-              font-size: 0;
-              height: 100%;
-              max-width: 82%;
-
-              &:hover {
-                opacity: .6;
-              }
-            }
-          }
-
-          .cat {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: inline-block;
-            background: #1e1109;
-            color: #fff;
-            font-size: 13px;
-            padding: 3px 10px;
-            text-align: center;
-            z-index: 1000;
-          }
-        }
-
-        .date {
-          text-align: center;
-          font-size: 15px;
-          font-family: "Crimson Text",serif;
-          margin-bottom: 10px;
-          @include flex-al-c;
-
-          span {
-            font-size: 20px;
-            color: #0089A7;
-            padding: 0 3px;
-          }
-        }
+      &:after {
+        right: auto;
       }
     }
   }
+}
 
-  .works {
-    position: relative;
+.works {
+  position: relative;
+  margin-top: 60px;
 
-    &-list {
-      @include flex-c;
-      flex-wrap: wrap;
-      margin-top: 20px;
+  &-list {
+    @include flex-c;
+    flex-wrap: wrap;
+    margin-top: 20px;
 
-      &::before {
-        display: table;
-      }
+    &::before {
+      display: table;
+    }
 
-      &-box {
-        background: #fff;
-        border-bottom: 2px solid #0089A7;
-        position: relative;
-        width: 500px;
-        margin: 0 20px;
-        margin-bottom: 40px;
-        cursor: pointer;
+    &-box {
+      background: #fff;
+      border-bottom: 2px solid #0089A7;
+      position: relative;
+      width: 500px;
+      margin: 0 20px;
+      margin-bottom: 40px;
+      cursor: pointer;
 
-        a {
-          color: #000;
+      a {
+        color: #000;
 
-          .default {
-            position: relative;
-            z-index: 10;
-            transition: all .4s cubic-bezier(.42,0,.58,1);
+        .default {
+          position: relative;
+          z-index: 10;
+          transition: all .4s cubic-bezier(.42,0,.58,1);
 
-            img {
-              line-height: 1;
-              font-size: 0;
-              height: 300px;
-              width: 500px;
-            }
-          }
-
-          .hover {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-
-            img {
-              line-height: 1;
-              font-size: 0;
-              height: 300px;
-              width: 500px;
-            }
-          }
-
-          .text-box {
-            width: calc(100% - 20px);
-            padding: 10px;
-
-            &-content {
-              font-size: 20px;
-              padding: 20px 0;
-            }
-
-            &-txt {
-              font-size: 15px;
-              color: #636363;
-            }
+          img {
+            line-height: 1;
+            font-size: 0;
+            height: 300px;
+            width: 500px;
           }
         }
 
-        &:hover {
-          a {
-            .default {
-              opacity: 0;
-            }
-  
-            .hover {
-              opacity: 1;
-            }
+        .hover {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+
+          img {
+            line-height: 1;
+            font-size: 0;
+            height: 300px;
+            width: 500px;
+          }
+        }
+
+        .text-box {
+          width: calc(100% - 20px);
+          padding: 10px;
+
+          &-content {
+            font-size: 20px;
+            padding: 20px 0;
+          }
+
+          &-txt {
+            font-size: 15px;
+            color: #636363;
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          .default {
+            opacity: 0;
+          }
+
+          .hover {
+            opacity: 1;
           }
         }
       }
