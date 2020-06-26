@@ -70,41 +70,7 @@ body, html {
     }
   }
 
-  .start {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 999;
-    background-color: #fff;
-    transition: .2s;
-    animation: close .3s linear 1 both;
-    animation-delay: 3s;
-    @include flex-c;
-
-    &::before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      animation: start 1s linear 1 both;
-      animation-timing-function: ease-in;
-      background-color: #0089A7;
-    }
-
-    &-txt {
-      color: #fff;
-      font-size: 20px;
-      z-index: 1;
-    }
-  }
+  
 
   .fullscreen {
     height: 100%;
@@ -114,6 +80,42 @@ body, html {
     left: 0;
     bottom: 0;
     right: 0;
+
+    .start {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 999;
+      background-color: #fff;
+      transition: .2s;
+      animation: close .3s linear 1 both;
+      animation-delay: 3s;
+      @include flex-c;
+  
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        animation: start 1s linear 1 both;
+        animation-timing-function: ease-in;
+        background-color: #0089A7;
+      }
+  
+      &-txt {
+        color: #fff;
+        font-size: 20px;
+        z-index: 1;
+      }
+    }
   }
 
   .down-box {

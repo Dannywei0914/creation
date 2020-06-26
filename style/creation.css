@@ -88,7 +88,17 @@ body, html {
           transform: scalex(1);
 }
 
-.header .start {
+.header .fullscreen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.header .fullscreen .start {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -115,7 +125,7 @@ body, html {
           align-items: center;
 }
 
-.header .start::before {
+.header .fullscreen .start::before {
   content: "";
   height: 100%;
   width: 100%;
@@ -131,20 +141,10 @@ body, html {
   background-color: #0089A7;
 }
 
-.header .start-txt {
+.header .fullscreen .start-txt {
   color: #fff;
   font-size: 20px;
   z-index: 1;
-}
-
-.header .fullscreen {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 
 .header .down-box {
