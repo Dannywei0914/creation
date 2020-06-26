@@ -12,6 +12,10 @@ $(document).ready(function() {
     slidesToScroll: 4
   });
 
+  setTimeout(() => {
+    // $('.start').hide();
+  }, 2000);
+
   window.setInterval(() => {
     img1.toggleClass('sliders-option_show');
     img2.toggleClass('sliders-option_show');

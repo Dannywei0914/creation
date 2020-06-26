@@ -88,6 +88,55 @@ body, html {
           transform: scalex(1);
 }
 
+.header .start {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-animation: close .3s linear 1 both;
+          animation: close .3s linear 1 both;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .start::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: start 1s linear 1 both;
+          animation: start 1s linear 1 both;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  background-color: #0089A7;
+}
+
+.header .start-txt {
+  color: #fff;
+  font-size: 20px;
+  z-index: 1;
+}
+
 .header .fullscreen {
   height: 100%;
   width: 100%;
@@ -105,6 +154,7 @@ body, html {
   z-index: 3;
   width: 40px;
   height: 40px;
+  cursor: pointer;
   background-image: url(../images/icons/download-white.svg);
   background-position: center;
   background-size: cover;
@@ -618,8 +668,6 @@ body, html {
 }
 
 .skill .all-btn:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
 }
@@ -719,58 +767,58 @@ body, html {
   cursor: pointer;
 }
 
-.works-list-box a {
+.works-list-box .works-list-item {
   color: #000;
 }
 
-.works-list-box a .default {
+.works-list-box .works-list-item .default {
   position: relative;
   z-index: 10;
   -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.works-list-box a .default img {
+.works-list-box .works-list-item .default img {
   line-height: 1;
   font-size: 0;
   height: 300px;
   width: 500px;
 }
 
-.works-list-box a .hover {
+.works-list-box .works-list-item .hover {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
 }
 
-.works-list-box a .hover img {
+.works-list-box .works-list-item .hover img {
   line-height: 1;
   font-size: 0;
   height: 300px;
   width: 500px;
 }
 
-.works-list-box a .text-box {
+.works-list-box .works-list-item .text-box {
   width: calc(100% - 20px);
   padding: 10px;
 }
 
-.works-list-box a .text-box-content {
+.works-list-box .works-list-item .text-box-content {
   font-size: 20px;
   padding: 20px 0;
 }
 
-.works-list-box a .text-box-txt {
+.works-list-box .works-list-item .text-box-txt {
   font-size: 15px;
   color: #636363;
 }
 
-.works-list-box:hover a .default {
+.works-list-box:hover .works-list-item .default {
   opacity: 0;
 }
 
-.works-list-box:hover a .hover {
+.works-list-box:hover .works-list-item .hover {
   opacity: 1;
 }
 
@@ -857,6 +905,50 @@ body, html {
   90% {
     -webkit-transform: translate3d(0, -4px, 0);
             transform: translate3d(0, -4px, 0);
+  }
+}
+
+@-webkit-keyframes start {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes start {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes close {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=creation.css.map */

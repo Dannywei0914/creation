@@ -68,8 +68,42 @@ body, html {
         }
       }
     }
+  }
 
-    
+  .start {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    transition: .2s;
+    animation: close .3s linear 1 both;
+    animation-delay: 3s;
+    @include flex-c;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      animation: start 1s linear 1 both;
+      animation-timing-function: ease-in;
+      background-color: #0089A7;
+    }
+
+    &-txt {
+      color: #fff;
+      font-size: 20px;
+      z-index: 1;
+    }
   }
 
   .fullscreen {
@@ -89,6 +123,7 @@ body, html {
     z-index: 3;
     width: 40px;
     height: 40px;
+    cursor: pointer;
     background-image: url(../images/icons/download-white.svg);
     background-position: center;
     background-size: cover;
@@ -556,7 +591,6 @@ body, html {
   
     &:hover {
       &:after {
-        transform: scaleX(1);
         transition-delay: .3s;
       }
   
@@ -646,7 +680,7 @@ body, html {
       margin-bottom: 40px;
       cursor: pointer;
 
-      a {
+      .works-list-item {
         color: #000;
 
         .default {
@@ -693,7 +727,7 @@ body, html {
       }
 
       &:hover {
-        a {
+       .works-list-item {
           .default {
             opacity: 0;
           }
@@ -742,7 +776,32 @@ body, html {
     animation-timing-function: cubic-bezier(.755,.05,.855,.06);
     transform: translate3d(0,-15px,0);
   }
+
   90% {
     transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes start {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  to {
+    opacity: 0;
+    z-index: 1;
   }
 }
