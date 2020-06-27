@@ -439,7 +439,6 @@ body, html {
   width: calc(100% - 100px);
   height: 300px;
   background-color: #0089A7;
-
   padding: 50px 50px;
 
   &-title {
@@ -454,41 +453,75 @@ body, html {
   }
 
   &-router {
-    width: 30px;
-    height: 30px;
+    width: 300px;
+    height: 100px;
     margin: 0 30px;
+    background-color: #fff;
+    padding: 0 5px;
 
-    &-icon1 {
+    &_fb {
+      border: 5px solid #3b5998;
+
+      .footer-router__txt {
+        color: #3b5998;
+      }
+    }
+
+    &_ig {
+      background:linear-gradient(right,#405DE6,#C13584);
+      padding: 5px;
+
+      .footer-router__box {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        padding: 5px;
+        background-color: #fff;
+      }
+
+      .footer-router__txt {
+        color: #C13584;
+      }
+    }
+
+    &_git {
+      border: 5px solid #000;
+      
+      .footer-router__txt {
+        color: #000;
+      }
+    }
+
+    &_gmail {
+      border: 5px solid #EA2D00;
+      
+      .footer-router__txt {
+        color: #EA2D00;
+      }
+    }
+
+    &__box {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      @include flex-c;
+    }
+
+    &__icon {
       width: 30px;
       height: 30px;
     }
 
-    &-email {
-      @include flex-al-c;
-
-      img {
-        padding-right: 10px;
-      }
+    &__item {
+      text-align: left;
+      padding: 0 10px;
     }
 
-    &-txt {
-      font-size: 15px;
-      color: #fff;
-    }
+    &__txt {
+      font-size: 25px;
 
-  &-icon2 {
-      width: 30px;
-      height: 30px;
-      display: none;
-    }
-
-    &:hover {
-      a>.footer-router-icon1 {
-        display: none;
-      }
-
-      a>.footer-router-icon2 {
-        display: block;
+      &_little {
+        font-size: 10px;
+        color: #000;
       }
     }
   }
