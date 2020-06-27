@@ -32,6 +32,7 @@
   "dependencies": {
     "flexslider": "^2.7.2",
     "jquery": "^3.5.1",
+    "particles.js": "^2.0.0",
     "reset-css": "^5.0.1",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^9.14.0"
