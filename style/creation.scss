@@ -1,4 +1,8 @@
 @import "./public-flex.scss";
+@font-face {
+  font-family: 'antara';
+  src: local('a Antara Distance')
+}
 body, html {
   height: 100%;
   width: 100%;
@@ -158,18 +162,17 @@ body, html {
       opacity: 0;
       position: absolute;
       top: 0;
-      left: 0;
       z-index: 1;
       width: 100%;
       height: inherit;
       overflow: hidden;
       transition: .6s;
+      @include flex-jc-c;
 
       &_show {
         opacity: 2;
 
         .sliders-textbox {
-          left: 200px;
           opacity: 2;
         }
       }
@@ -198,19 +201,20 @@ body, html {
     &-textbox {
       position: absolute;
       top: 150px;
-      left: 100px;
       opacity: 0;
       transition: .6s;
+      text-align: center;
     }
 
     &-txt {
+      font-family: 'antara';
       color: #fff;
-      font-size: 30px;
+      font-size: 150px;
       padding-bottom: 10px;
+      transform: rotate(-20deg);
       text-shadow: black 0.1em 0.1em 0.2em;
 
       &_bold {
-        font-size: 40px;
         font-weight: bold;
       }
     }

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'antara';
+  src: local("a Antara Distance");
+}
+
 body, html {
   height: 100%;
   width: 100%;
@@ -194,13 +199,18 @@ body, html {
   opacity: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 1;
   width: 100%;
   height: inherit;
   overflow: hidden;
   -webkit-transition: .6s;
   transition: .6s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header .sliders-option_show {
@@ -208,7 +218,6 @@ body, html {
 }
 
 .header .sliders-option_show .sliders-textbox {
-  left: 200px;
   opacity: 2;
 }
 
@@ -235,21 +244,23 @@ body, html {
 .header .sliders-textbox {
   position: absolute;
   top: 150px;
-  left: 100px;
   opacity: 0;
   -webkit-transition: .6s;
   transition: .6s;
+  text-align: center;
 }
 
 .header .sliders-txt {
+  font-family: 'antara';
   color: #fff;
-  font-size: 30px;
+  font-size: 150px;
   padding-bottom: 10px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .header .sliders-txt_bold {
-  font-size: 40px;
   font-weight: bold;
 }
 
