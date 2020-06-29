@@ -1,12 +1,14 @@
 @import "./public-flex.scss";
 @font-face {
   font-family: 'antara';
-  src: local('a Antara Distance')
+  src: url('/font/AAntaraDistance-OVA2e.ttf');
 }
+
 body, html {
   height: 100%;
   width: 100%;
   position: relative;
+  font-family: 'Microsoft JhengHei' ;
 }
 
 .header {
@@ -35,6 +37,7 @@ body, html {
     }
 
     &-name {
+      font-family: monospace;
       font-size: 24px;
       color: #fff;
       font-weight: bold;
@@ -191,7 +194,7 @@ body, html {
     }
 
     .img-1 {
-      background-image: url("../images/life/IMG_6218.JPG");
+      background-image: url("../images/life/IMG9527.jpg");
     }
 
     .img-2 {
@@ -200,7 +203,7 @@ body, html {
 
     &-textbox {
       position: absolute;
-      top: 150px;
+      top: 25%;
       opacity: 0;
       transition: .6s;
       text-align: center;
@@ -230,28 +233,23 @@ body, html {
   padding: 50px 100px;
   width: calc(100% - 200px);
   height: 500px;
-  @include flex-c;
+  @include flex-jc-between;
   position: relative;
 
   &_show {
     .about-content {
-      left: 100px;
       opacity: 1;
     }
 
     .about-img {
       opacity: 1;
-      right: 100px;
     }
   }
 
   &-content {
-    position: absolute;
     display: block;
-    left: -500px;
     opacity: 0;
     transition: .6s;
-    width: calc(100% - 500px);
 
     &-title {
       color: #000;
@@ -266,9 +264,8 @@ body, html {
   }
 
   &-img {
+    position: relative;
     display: block;
-    position: absolute;
-    right: -500px;
     opacity: 0;
     transition: .6s;
 
@@ -310,23 +307,19 @@ body, html {
 
   &_show {
     .experience-content {
-      right: 50px;
       opacity: 1;
     }
 
     .experience-img {
       opacity: 1;
-      left: 100px;
     }
   }
 
   &-content {
     display: block;
-    right: -500px;
+    right: 50px;
     opacity: 0;
     transition: .6s;
-    width: calc(100% - 600px);
-    position: absolute;
 
     &-title {
       color: #000;
@@ -363,8 +356,7 @@ body, html {
 
   &-img {
     display: block;
-    position: absolute;
-    left: -500px;
+    position: relative;
     opacity: 0;
     transition: .6s;
 
@@ -437,7 +429,6 @@ body, html {
 
 .footer {
   width: calc(100% - 100px);
-  height: 300px;
   background-color: #0089A7;
   padding: 50px 50px;
 
@@ -448,14 +439,18 @@ body, html {
 
   &-list {
     display: block;
+    width: 100%;
     margin-top: 50px;
-    @include flex-al-c;
+    flex-wrap: wrap;
+    @include flex-jc-between;
   }
 
   &-router {
-    width: 300px;
+    display: block;
+    width: calc(25% - 80px);
+    min-width: 220px;
     height: 100px;
-    margin: 0 30px;
+    margin: 10px 30px;
     background-color: #fff;
     padding: 0 5px;
 
@@ -470,6 +465,8 @@ body, html {
     &_ig {
       background:linear-gradient(right,#405DE6,#C13584);
       padding: 5px;
+      width: calc(25% - 70px);
+      min-width: 230px;
 
       .footer-router__box {
         width: calc(100% - 10px);
