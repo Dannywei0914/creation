@@ -76,6 +76,10 @@ $(document).ready(function() {
     })  
   })
 
+  $('#close').click(function () {
+    $('.nav-menu').removeClass('nav-menu_show'); 
+  })
+
   window.addEventListener('scroll', function() {
     if (window.scrollY !== 0) {
       $('.nav').addClass('nav_bgcolor')
