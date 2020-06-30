@@ -13,32 +13,65 @@ $(document).ready(function() {
     slidesToScroll: 4
   });
 
-  setTimeout(() => {
-    // $('.start').hide();
-  }, 2000);
-
   window.setInterval(() => {
-    img1.toggleClass('sliders-option_show');
-    img2.toggleClass('sliders-option_show');
+    img1.toggleClass('fullscreen-sliders__option_show');
+    img2.toggleClass('fullscreen-sliders__option_show');
   }, 5000);
+
+  $('#menu').click(function() {
+    console.log(123);
+    $('.nav-menu').addClass('nav-menu_show');
+  })
 
   $('#icon').click(function () {
     window.scrollTo({
-      top: $('.body').get(0).offsetTop,
+      top: $('.body').get(0).offsetTop - 50,
       behavior: 'smooth',
     })  
   })
 
   $('#about').click(function () {
     window.scrollTo({
-      top: $('.body').get(0).offsetTop,
+      top: $('.body').get(0).offsetTop - 50,
       behavior: 'smooth',
     })  
   })
 
+  $('#menu-about').click(function () {
+    $('.nav-menu').removeClass('nav-menu_show');
+    window.scrollTo({
+      top: $('.body').get(0).offsetTop - 50,
+      behavior: 'smooth',
+    })  
+  })
+
+  
   $('#skills').click(function () {
     window.scrollTo({
-      top: $('#event').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight,
+      top: $('.skill').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight,
+      behavior: 'smooth',
+    })  
+  })
+
+  $('#menu-skills').click(function () {
+    $('.nav-menu').removeClass('nav-menu_show');
+    window.scrollTo({
+      top: $('.skill').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight,
+      behavior: 'smooth',
+    })  
+  })
+
+  $('#creation').click(function () {
+    window.scrollTo({
+      top: $('.works').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight - 110,
+      behavior: 'smooth',
+    })  
+  })
+
+  $('#menu-creation').click(function () {
+    $('.nav-menu').removeClass('nav-menu_show');
+    window.scrollTo({
+      top: $('.works').get(0).offsetTop + $('.fullscreen').get(0).offsetHeight - 110,
       behavior: 'smooth',
     })  
   })
@@ -50,7 +83,7 @@ $(document).ready(function() {
       $('.nav').removeClass('nav_bgcolor')
     }
 
-    if (window.scrollY > ($('.sliders').get(0).offsetHeight) / 2) {
+    if (window.scrollY > ($('.fullscreen-sliders').get(0).offsetHeight) / 2) {
       $('.about').addClass('about_show')
     } else {
       $('.about').removeClass('about_show')

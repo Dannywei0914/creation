@@ -1,0 +1,15 @@
+@mixin screen($system) {
+  @if $system == laptop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $system == pad {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $system == mobile {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+}

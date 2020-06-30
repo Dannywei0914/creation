@@ -14,34 +14,58 @@
   <header class="header">
     <div class="nav">
       <div class="nav-logo">
-        <h1 class="nav-name">Danny</h1>
+        <h1 class="nav-logo__name">Danny</h1>
       </div>
       <ul class="nav-list">
-        <li class="nav-option" id="about">關於我</li>
-        <li class="nav-option" id="skills">我的技能</li>
-        <li class="nav-option">我的作品</li>
+        <li class="nav-list__option" id="about">關於我</li>
+        <li class="nav-list__option" id="skills">我的技能</li>
+        <li class="nav-list__option" id="creation">我的作品</li>
+        <li class="nav-list__option nav-list__option_none">
+          <i class="nav-list__option-menu" id="menu">
+            <img src="../creation/images/icons/open-menu.svg" alt="">
+          </i>
+        </li>
       </ul>
+      <div class="nav-menu">
+        <ul class="nav-menu__list">
+          <p class="nav-menu__name">Danny</p>
+          <li class="nav-menu__option" id="menu-about">關於我</li>
+          <li class="nav-menu__option" id="menu-skills">我的技能</li>
+          <li class="nav-menu__option" id="menu-creation">我的作品</li>
+          <li class="nav-menu__option nav-menu__option_flex">
+            <a href="https://www.facebook.com/profile.php?id=100000421838403">
+              <img src="./images/icons/facebook-white.svg" alt="">
+            </a>
+            <a href="https://github.com/Dannywei0914">
+              <img src="./images/icons/github.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/?hl=zh-tw">
+              <img src="./images/icons/instagram.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="fullscreen">
-      <div class="start">
-        <p class="start-txt">
+      <div class="fullscreen-start">
+        <p class="fullscreen-start__txt">
           はじめまして
         </p>
       </div>
-      <ul class="sliders">
-        <li id="img1" class="sliders-option sliders-option_show">
+      <ul class="fullscreen-sliders">
+        <li id="img1" class="fullscreen-sliders__option fullscreen-sliders__option_show">
           <img src="" alt="" class="img-1">
-          <div class="sliders-textbox">
-            <p class="sliders-txt sliders-txt_bold">Danny</p>
-            <p class="sliders-txt">
+          <div class="fullscreen-sliders__textbox">
+            <p class="fullscreen-sliders__textbox-txt fullscreen-sliders__textbox-txt_bold">Danny</p>
+            <p class="fullscreen-sliders__textbox-txt">
               Font-end Engineer
             </p>
           </div>
         </li>
-        <li id="img2" class="sliders-option">
+        <li id="img2" class="fullscreen-sliders__option">
           <img src="" alt="" class="img-2">
-          <div class="sliders-textbox">
-            <p class="sliders-txt">
+          <div class="fullscreen-sliders__textbox">
+            <p class="fullscreen-sliders__textbox-txt">
               Love & Life
             </p>
           </div>
@@ -52,117 +76,124 @@
   </header>
   <div class="body" id="body">
     <div class="about">
-      <div class="about-content">
-        <span class="about-content-title">關於我</span>
-        <p class="about-content-txt">
-          出生於高雄市，畢業於正修科技大學資訊管理學系，喜歡運動、社交並且對程式有興趣，
-          目前擔任前端開發工程師有一年多快兩年的經驗，有開發過專案，善於使用多種工具並與團隊討論交流，
-          在未來希望能學到更多東西並豐富自身的經驗與side-project內容．
-        </p>
-        <span class="about-content-title">自我學習</span>
-        <p class="about-content-txt">
-          由於喜歡程式開發，所以會在空檔時去討論區或讀書會查看有沒有新的工具與知識，希望能持續增進自己的知識量並熟練多樣工具。
-          對日本與美國的文化與運動充滿興趣，所以希望能學會日語及英語，讓自己有流利的語法，能到國外見識更多文化並且讓自己有更多的發展機會。
-        </p>
+      <div class="title">
+        <p class="title__txt title__txt_en-big title__txt_big">About</p>
       </div>
-      <div class="about-img">
-        <img src="./images/life/IMG_6866.JPG" alt="">
+      <div class="about__box">
+        <div class="about__box-content">
+          <span class="about__box-content-title">關於我</span>
+          <p class="about__box-content-txt">
+            出生於高雄市，畢業於正修科技大學資訊管理學系，喜歡運動、社交並且對程式有興趣，
+            目前擔任前端開發工程師有一年多快兩年的經驗，有開發過專案，善於使用多種工具並與團隊討論交流，
+            在未來希望能學到更多東西並豐富自身的經驗與side-project內容．
+          </p>
+          <span class="about__box-content-title">自我學習</span>
+          <p class="about__box-content-txt">
+            由於喜歡程式開發，所以會在空檔時去討論區或讀書會查看有沒有新的工具與知識，希望能持續增進自己的知識量並熟練多樣工具。
+            對日本與美國的文化與運動充滿興趣，所以希望能學會日語及英語，讓自己有流利的語法，能到國外見識更多文化並且讓自己有更多的發展機會。
+          </p>
+        </div>
+        <div class="about__box-img">
+          <img src="./images/life/IMG_6866.JPG" alt="">
+        </div>
       </div>
     </div>
     <div class="experience">
-      <div class="experience-img">
-        <img src="./images/life/IMG_6900.JPG" alt="">
+      <div class="title">
+        <p class="title__txt title__txt_en-big title__txt_big">Experience</p>
       </div>
-      <div class="experience-content">
-        <span class="experience-content-title">富比庫股份有限公司</span>
-        <p class="experience-content-title experience-content-title_little">
-          前端開發工程師 2018/7~2020/5 1年11個月
-        </p>
-        <p class="experience-content-txt">          
-          網頁介面的前端開發，前期介面開發，後期專研Angular框架，並實用在兩個專案上，並與組員使用git版本控管管理專案並使用slack溝通，與後端配合API資料介接，與PM、設計人員談論需求．
-        </p>
-        <ul class="experience-content-list">
-          <ol class="">
-            <span class="experience-content-txt experience-content-txt_title">          
-              Angular框架開發，API資料介接，前後端分離
-            </span>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                1.零件資料比對系統平台
+      <div class="experience__box">
+        <div class="experience__box-img">
+          <img src="./images/life/IMG_6900.JPG" alt="">
+        </div>
+        <div class="experience__box-content">
+          <span class="experience__box-content-title">富比庫股份有限公司</span>
+          <p class="experience__box-content-title experience__box-content-title_little">
+            前端開發工程師 2018/7~2020/5 1年11個月
+          </p>
+          <p class="experience__box-content-txt">          
+            網頁介面的前端開發，前期介面開發，後期專研Angular框架，並實用在兩個專案上，並與組員使用git版本控管管理專案並使用slack溝通，與後端配合API資料介接，與PM、設計人員談論需求．
+          </p>
+          <ul class="experience__box-content-list">
+            <ol>
+              <span class="experience__box-content-txt experience__box-content-txt_title">          
+                Angular框架開發，API資料介接，前後端分離
               </span>
-              <p class="experience-content-txt experience-content-txt_left">
-                提供平台做零件資料上傳、比對、下載，有使用者權限和使用socket.io連接後端做追蹤訊息         
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  1.零件資料比對系統平台
+                </span>
+                <p class="experience__box-content-txt experience__box-content-txt_left">
+                  提供平台做零件資料上傳、比對、下載，有使用者權限和使用socket.io連接後端做追蹤訊息         
+                </p>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  2.員工資料管理系統
+                </span>
+                <p class="experience__box-content-txt experience__box-content-txt_left">          
+                  提供員工管理個人資訊的一個平台
+                </p>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  3.人事資料管理系統
+                </span>
+                <p class="experience__box-content-txt experience__box-content-txt_left">          
+                  提供給人資部門管理員工資訊的平台
+                </p>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  4.報到前置作業系統
+                </span>
+                <p class="experience__box-content-txt experience__box-content-txt_left">          
+                  提供給進入公司工作的新人填寫資料報到的平台
+                </p>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  5.部門工作日誌系統
+                </span>
+                <p class="experience__box-content-txt experience__box-content-txt_left">          
+                  提供給其他部門專用日誌平台
+                </p>
+              </li>
+            </ol>
+            <ol>
+              <p class="experience__box-content-txt experience__box-content-txt_title">          
+                介面開發，前後端配合
               </p>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                2.員工資料管理系統
-              </span>
-              <p class="experience-content-txt experience-content-txt_left">          
-                提供員工管理個人資訊的一個平台
-              </p>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                3.人事資料管理系統
-              </span>
-              <p class="experience-content-txt experience-content-txt_left">          
-                提供給人資部門管理員工資訊的平台
-              </p>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                4.報到前置作業系統
-              </span>
-              <p class="experience-content-txt experience-content-txt_left">          
-                提供給進入公司工作的新人填寫資料報到的平台
-              </p>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                5.部門工作日誌系統
-              </span>
-              <p class="experience-content-txt experience-content-txt_left">          
-                提供給其他部門專用日誌平台
-              </p>
-            </li>
-          </ol>
-          <ol class="">
-            <p class="experience-content-txt experience-content-txt_title">          
-              介面開發，前後端配合
-            </p>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                1.各系統的彈跳視窗開發
-              </span>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                2.電子零件設計仲介平台與零件管理平台介面開發
-              </span>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                3.部門的零件資料統計平台
-              </span>
-            </li>
-            <li class="experience-content-item">
-              <span class="experience-content-txt">          
-                4.系統的報表顯示管理平台
-              </span>
-            </li>
-          </ol>
-        </ul>
-      </div>
-    </div>
-    <div class="skill" id="event">
-      <div class="event">
-        <div class="title">
-          <p class="title-txt">技能</p>
-          <h2 class="title-txt title-txt_big">專業技術與工具</h2>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  1.各系統的彈跳視窗開發
+                </span>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  2.電子零件設計仲介平台與零件管理平台介面開發
+                </span>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  3.部門的零件資料統計平台
+                </span>
+              </li>
+              <li class="experience__box-content-item">
+                <span class="experience__box-content-txt">          
+                  4.系統的報表顯示管理平台
+                </span>
+              </li>
+            </ol>
+          </ul>
         </div>
       </div>
-      <section class="regular slider">
+    </div>
+    <div class="skill">
+      <div class="title">
+        <h2 class="title__txt title__txt_en-big title__txt_big">Skills</h2>
+      </div>
+      <section class="regular">
         <div>
           <img src="./images/tool-logo/angular.svg" />
         </div>
@@ -200,14 +231,51 @@
           <img src="./images/tool-logo/Visual_Studio_Code_1.35_icon.svg" />
         </div>
       </section>
+      <section class="skill__list">
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/angular.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/JavaScript_logo_2.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/typescript.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/HTML5_Badge.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/CSS.3.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/jquery.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/Sass_Logo_Color.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/slack-new-logo.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/Git-logo.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/github.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/sourcetree.svg" />
+        </div>
+        <div class="skill__list-icon">
+          <img src="./images/tool-logo/Visual_Studio_Code_1.35_icon.svg" />
+        </div>
+      </section>
       <div class="particles" id="particles-js"></div>
     </div>
     <div class="works">
       <div class="title">
-        <h2 class="title-txt title-txt_big">我的作品</h2>
+        <h2 class="title__txt title__txt_en-big title__txt_big">Creation</h2>
       </div>
-      </div>
-      <!-- <div class="all-btn"><a href=""><span>VIEW ALL</span></a></div> -->
+      <div class="all-btn"><div><span>製作中</span></div></div>
       <div class="works-list">
         <div class="works-list-box">
           <div class="works-list-item">
