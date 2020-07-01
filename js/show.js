@@ -19,7 +19,6 @@ $(document).ready(function() {
   }, 5000);
 
   $('#menu').click(function() {
-    console.log(123);
     $('.nav-menu').addClass('nav-menu_show');
   })
 

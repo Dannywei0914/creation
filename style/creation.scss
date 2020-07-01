@@ -298,30 +298,27 @@ body, html {
     }
   }
 
-  .down-box {
+  .down-icon {
+    width: 100%;
     position: absolute;
     bottom: 3%;
-    left: 50%;
     z-index: 3;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    background-image: url(../images/icons/download-white.svg);
-    background-position: center;
-    background-size: cover;
-    transform: translateX(-50%);
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-name: bounce;
-    transform-origin: center bottom;
 
-    .icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      padding: 10px;
-      border: 3px solid #000;
+    &__box {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      cursor: pointer;
+      background-image: url(../images/icons/download-white.svg);
+      background-position: center;
+      background-size: cover;
+      transform: translateX(-50%);
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-name: bounce;
+      transform-origin: center bottom;
     }
   }
 }
