@@ -238,7 +238,7 @@ body, html {
         top: 0;
         z-index: 1;
         width: 100%;
-        height: inherit;
+        height: 100%;
         overflow: hidden;
         transition: .6s;
         @include flex-jc-c;
