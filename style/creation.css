@@ -329,6 +329,12 @@ body, html {
   background-size: cover;
 }
 
+@media screen and (max-width: 500px) {
+  .header .fullscreen-sliders__option img {
+    background-size: 100% 100%;
+  }
+}
+
 .header .fullscreen-sliders .img-1 {
   background-image: url("../images/life/IMG9527.jpg");
 }
