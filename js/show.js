@@ -1,10 +1,54 @@
 import $ from "jquery";
 import "slick-carousel";
 import "particles.js";
+import emailjs from "emailjs-com/dist/email";
+
+const inputName = $('#inputName');
+const inputEmail = $('#inputEmail');
+const txtBox = $('#txtBox');
+
+let name = '';
+let email = '';
+let textBox = '';
+
+inputName.ready(function() {
+  document.addEventListener('keyup', event => {
+    name = event.target.value;
+  });
+})
+
+inputEmail.ready(function() {
+  document.addEventListener('keyup', event => {
+    email = event.target.value;
+  });
+})
+
+txtBox.ready(function() {
+  document.addEventListener('keyup', event => {
+    textBox = event.target.value;
+  });
+})
 
 $(document).ready(function() {
   var img1 = $('#img1');
   var img2 = $('#img2');
+
+  $('#inputButton').click(function() {
+    var template_params = {
+      "userMail": email,
+      "username": name,
+      "content": textBox,
+      "img": "../images/life/IMG_6218.jp"
+    }
+    
+    var service_id = "default_service";
+    var template_id = "danny";
+    emailjs.send(service_id, template_id, template_params);
+  })
+
+  emailjs.init("user_iCoVSFut9TCNadVc87BLv");
+
+  
 
   $('.regular').slick({
     dots: true,
