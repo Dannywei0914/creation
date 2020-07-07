@@ -834,6 +834,10 @@ body, html {
         &_right {
           margin-right: 50px;
         }
+
+        &_error {
+          border: 1px solid red;
+        }
       }
 
       &-textbox {
@@ -844,6 +848,10 @@ body, html {
         padding:10px;
         font-size: 15px;
         font-family: 'Microsoft JhengHei';
+
+        &_error {
+          border: 1px solid red;
+        }
       }
     }
 

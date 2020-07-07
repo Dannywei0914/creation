@@ -11,6 +11,10 @@ let name = '';
 let email = '';
 let textBox = '';
 
+let nameError = false;
+let emailError = false;
+let textBoxError = false;
+
 inputName.ready(function() {
   document.addEventListener('keyup', event => {
     name = event.target.value;
@@ -32,23 +36,58 @@ txtBox.ready(function() {
 $(document).ready(function() {
   var img1 = $('#img1');
   var img2 = $('#img2');
-
-  $('#inputButton').click(function() {
-    var template_params = {
-      "userMail": email,
-      "username": name,
-      "content": textBox,
-      "img": "../images/life/IMG_6218.jp"
-    }
-    
-    var service_id = "default_service";
-    var template_id = "danny";
-    emailjs.send(service_id, template_id, template_params);
-  })
-
   emailjs.init("user_iCoVSFut9TCNadVc87BLv");
 
-  
+  $('#inputButton').click(function() {
+    if (email === '') {
+      $('#inputEmail').addClass('email__box-input_error');
+      emailError = true;
+    } else {
+      $('#inputEmail').removeClass('email__box-input_error');
+      emailError = false;
+    }
+
+    if (name === '') {
+      $('#inputName').addClass('email__box-input_error');
+      nameError = true;
+    } else {
+      $('#inputName').removeClass('email__box-input_error');
+      nameError = false;
+    }
+
+    if (textBox === '') {
+      $('#txtBox').addClass('email__box-textbox_error');
+      textBoxError = true;
+    } else {
+      $('#txtBox').removeClass('email__box-textbox_error');
+      textBoxError = false;
+    }
+
+    if (emailError === false & nameError === false & textBoxError === false) {
+      var template_params = {
+        "userMail": email,
+        "username": name,
+        "content": textBox,
+        "img": "../images/life/IMG_6218.jp"
+      }
+      
+      var service_id = "default_service";
+      var template_id = "danny";
+      emailjs.send(service_id, template_id, template_params).then((response) => {
+        email = '';
+        name = '';
+        textBox = '';
+        alert('寄送成功');
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((error) => {
+        alert('寄送失敗');
+        console.log('FAILED...', error);
+      })
+    } else {
+      alert('請輸入正確');
+    }
+  })
 
   $('.regular').slick({
     dots: true,

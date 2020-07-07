@@ -8,15 +8,18 @@
  * ======================
  *
  * 04/24/2020 by *** Jim Xie ***
- * 04/27/2020 [update] 
+ * 04/27/2020 [update]
  * initPackage() => initPackage({dep: string[], dev: string[]}) 可以帶參數安裝所需package
  * initPackage() => initConstruct({exist?: boolean, type: 'file' | 'folder', name: string}[]) 可以帶參數建立 檔案｜資料夾
- * 
+ *
  */
-const { existsSync, writeFileSync, readdirSync } = require('fs');
+
+const { existsSync, writeFileSync, readdirSync } = require('fs');// 讀存不存在、讀單一的檔案 讀資料夾
 const { execSync } = require('child_process');
-const os = require('os');
-const target = './package.json';
+const os = require('os'); // 偵測
+const package = './package.json';
+const gitignore = './.gitignore';
+const html = './index.html';
 
 /**
  * 初始化專案 安裝初始所需的packages
@@ -30,7 +33,7 @@ const initPackage = (
   packages = {
     dep: [],
     dev: []
-  }
+  }  //dep 是開發和正視都用得到 dev是在開發才有
 ) => {
   let { dep, dev } = packages;
   if (!dep) dep = [];
@@ -128,6 +131,11 @@ const initConstruct = (item = null) => {
       name: 'index.js'
     },
     {
+      exist: existsSync('.gitignore'),
+      type: 'file',
+      name: '.gitignore'
+    },
+    {
       exist: existsSync('script'),
       type: 'folder',
       name: 'script'
@@ -138,16 +146,18 @@ const initConstruct = (item = null) => {
       name: 'style'
     }
   ];
-  let cearteFileCMD = (()=> {
-    switch(os.platform()){
+  // 判斷系統建立檔案的cmd
+  let cearteFileCMD = (() => {
+    switch (os.platform()) {
       case 'win32':
         return 'echo nul > ';
       case 'darwin':
-        return 'touch'
+        return 'touch';
     }
   })();
+  // 最後執行的cmd
   let scriptCommand = '';
-  
+
   if (!item || !Array.isArray(item) || item.length < 1) {
     item = defaultItem;
   } else {
@@ -156,6 +166,7 @@ const initConstruct = (item = null) => {
       ...item
     }));
   }
+  // 組合scriptCommand
   item.forEach((i, index) => {
     const { type, name } = i;
     if (i && i.exist === false) {
@@ -168,6 +179,7 @@ const initConstruct = (item = null) => {
       }
     }
   });
+
   if (scriptCommand)
     execSync(
       scriptCommand,
@@ -192,7 +204,7 @@ const initJson = (option = null) => {
   const isExist = existsSync('package.json');
   console.log(isExist ? '有package.json' : '無package.json');
   if (isExist) {
-    const loadFile = require(target);
+    const loadFile = require(package);
     // name
     loadFile.name = option && option.name ? option.name : loadFile.name;
     // main
@@ -225,6 +237,7 @@ const initJson = (option = null) => {
     console.log(loadFile);
     return loadFile;
   } else {
+    writeFileSync('package.json', '', 'utf8')
     return {
       name: option && option.name ? option.name : 'project',
       version: '1.0.0',
@@ -258,13 +271,46 @@ const initJson = (option = null) => {
   }
 };
 
-//
+/**
+ * 修改檔案
+ *
+ * @param {string} tar
+ * @param {string} context
+ */
+const modifyFile = (tar, context) => {
+  if (existsSync(tar)) writeFileSync(tar, context);
+  return;
+};
+
+// package.json 設定
 const json = initJson({
   port: 9922
 });
+// package.json 安裝包
 const packageList = {
   dep: ['sweetalert2', 'reset-css']
 };
-writeFileSync(target, JSON.stringify(json));
+
+/**
+ * execute
+ */
+modifyFile(package, JSON.stringify(json));
 initPackage(packageList);
 initConstruct();
+modifyFile(gitignore, '/node_modules' + '\n');
+modifyFile(
+  html,
+  `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./index.js"></script>
+</body>
+</html>
+`
+);

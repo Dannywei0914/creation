@@ -1003,6 +1003,10 @@ body, html {
   margin-right: 50px;
 }
 
+.body .email__box-input_error {
+  border: 1px solid red;
+}
+
 .body .email__box-textbox {
   margin-top: 30px;
   width: calc(80% + 50px);
@@ -1012,6 +1016,10 @@ body, html {
   padding: 10px;
   font-size: 15px;
   font-family: 'Microsoft JhengHei';
+}
+
+.body .email__box-textbox_error {
+  border: 1px solid red;
 }
 
 .body .email__button {
