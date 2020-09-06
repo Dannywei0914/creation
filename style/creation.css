@@ -741,7 +741,7 @@ body, html {
 
 .body .works {
   position: relative;
-  margin-top: 60px;
+  margin: 60px 0;
   padding: 0 50px;
 }
 
@@ -771,6 +771,7 @@ body, html {
   width: 500px;
   margin: 0 20px;
   margin-bottom: 40px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -786,8 +787,7 @@ body, html {
 .body .works-list-box .works-list-item .default {
   position: relative;
   z-index: 10;
-  -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  overflow: hidden;
 }
 
 .body .works-list-box .works-list-item .default img {
@@ -795,31 +795,14 @@ body, html {
   font-size: 0;
   height: 300px;
   width: 500px;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 @media screen and (max-width: 500px) {
   .body .works-list-box .works-list-item .default img {
-    width: 300px;
-    height: 200px;
-  }
-}
-
-.body .works-list-box .works-list-item .hover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.body .works-list-box .works-list-item .hover img {
-  line-height: 1;
-  font-size: 0;
-  height: 300px;
-  width: 500px;
-}
-
-@media screen and (max-width: 500px) {
-  .body .works-list-box .works-list-item .hover img {
     width: 300px;
     height: 200px;
   }
@@ -837,15 +820,16 @@ body, html {
 
 .body .works-list-box .works-list-item .text-box-txt {
   font-size: 15px;
-  color: #636363;
+  color: #0089A7;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: inherit;
 }
 
-.body .works-list-box:hover .works-list-item .default {
-  opacity: 0;
-}
-
-.body .works-list-box:hover .works-list-item .hover {
-  opacity: 1;
+.body .works-list-box:hover .works-list-item .default img {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .body .works .all-btn {

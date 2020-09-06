@@ -614,7 +614,7 @@ body, html {
 
   .works {
     position: relative;
-    margin-top: 60px;
+    margin: 60px 0;
     padding: 0 50px;
   
     &-list {
@@ -633,6 +633,8 @@ body, html {
         width: 500px;
         margin: 0 20px;
         margin-bottom: 40px;
+        text-decoration: none;
+
         @include screen(mobile) {
           width: 300px;
         }
@@ -643,31 +645,15 @@ body, html {
           .default {
             position: relative;
             z-index: 10;
-            transition: all .4s cubic-bezier(.42,0,.58,1);
+            overflow: hidden;
   
             img {
               line-height: 1;
               font-size: 0;
               height: 300px;
               width: 500px;
-              @include screen(mobile) {
-                width: 300px;
-                height: 200px;
-              }
-            }
-          }
-  
-          .hover {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-  
-            img {
-              line-height: 1;
-              font-size: 0;
-              height: 300px;
-              width: 500px;
+              transform:scale(1,1);transition: all 1s ease-out;
+
               @include screen(mobile) {
                 width: 300px;
                 height: 200px;
@@ -686,7 +672,11 @@ body, html {
   
             &-txt {
               font-size: 15px;
-              color: #636363;
+              color: #0089A7;
+              line-height: 18px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: inherit;
             }
           }
         }
@@ -694,11 +684,9 @@ body, html {
         &:hover {
          .works-list-item {
             .default {
-              opacity: 0;
-            }
-  
-            .hover {
-              opacity: 1;
+              img {
+                transform:scale(1.2,1.2);
+              }
             }
           }
         }
