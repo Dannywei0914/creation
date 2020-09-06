@@ -77,12 +77,13 @@ $(document).ready(function() {
         email = '';
         name = '';
         textBox = '';
+        $('#inputName').val('');
+        $('#inputEmail').val('');
+        $('#txtBox').val('');
         alert('寄送成功');
-        console.log('SUCCESS!', response.status, response.text);
       })
       .catch((error) => {
         alert('寄送失敗');
-        console.log('FAILED...', error);
       })
     } else {
       alert('請輸入正確');
