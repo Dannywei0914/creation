@@ -337,11 +337,11 @@ body, html {
 }
 
 .header .fullscreen-sliders .img-1 {
-  background-image: url("../images/life/IMG9527.jpg");
+  background-image: url(../images/life/IMG9527.jpg);
 }
 
 .header .fullscreen-sliders .img-2 {
-  background-image: url("../images/life/IMG_9527.JPG");
+  background-image: url(../images/life/IMG_9527.jpg);
 }
 
 .header .fullscreen-sliders__textbox {
