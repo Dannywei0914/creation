@@ -35,7 +35,7 @@ body, html {
   }
 }
 .header .nav_bgcolor {
-  background-color: #0089A7;
+  background-color: #FFBB77;
 }
 .header .nav-logo {
   width: 100px;
@@ -128,7 +128,7 @@ body, html {
 .header .nav-menu__list {
   width: 200px;
   height: 100%;
-  background-color: #0089A7;
+  background-color: #FFBB77;
   text-align: center;
   padding-top: 50px;
   position: fixed;
@@ -205,7 +205,7 @@ body, html {
   right: 0;
   animation: start 1s linear 1 both;
   animation-timing-function: ease-in;
-  background-color: #0089A7;
+  background-color: #FFBB77;
 }
 .header .fullscreen-start__txt {
   color: #fff;
@@ -256,7 +256,7 @@ body, html {
   }
 }
 .header .fullscreen-sliders .img-1 {
-  background-image: url(../images/life/IMG9527.jpg);
+  background-image: url(../images/life/LINE_ALBUM_230217_0.jpg);
 }
 .header .fullscreen-sliders .img-2 {
   background-image: url(../images/life/IMG_9527.jpg);
@@ -336,7 +336,10 @@ body, html {
 }
 @media screen and (max-width: 1200px) {
   .body .about__box {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 .body .about__box-content {
@@ -385,7 +388,7 @@ body, html {
   position: absolute;
   right: -28px;
   top: -28px;
-  border: 6px solid #0089A7;
+  border: 6px solid #FFBB77;
   opacity: 0.5;
 }
 .body .about__box-img:after {
@@ -395,7 +398,7 @@ body, html {
   position: absolute;
   left: -28px;
   bottom: -28px;
-  border: 6px solid #0089A7;
+  border: 6px solid #FFBB77;
   opacity: 0.5;
 }
 .body .about__box-img img {
@@ -427,7 +430,10 @@ body, html {
 }
 @media screen and (max-width: 1200px) {
   .body .experience__box {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 .body .experience__box-content {
@@ -472,10 +478,8 @@ body, html {
   display: block;
   position: relative;
   opacity: 0;
-  transition: 0.6s;
   width: 400px;
-  height: 400px;
-  margin: 30px auto;
+  transition: 0.6s;
 }
 @media screen and (max-width: 500px) {
   .body .experience__box-img {
@@ -490,7 +494,7 @@ body, html {
   position: absolute;
   right: -28px;
   top: -28px;
-  border: 6px solid #0089A7;
+  border: 6px solid #FFBB77;
   opacity: 0.5;
 }
 .body .experience__box-img:after {
@@ -500,18 +504,43 @@ body, html {
   position: absolute;
   left: -28px;
   bottom: -28px;
-  border: 6px solid #0089A7;
+  border: 6px solid #FFBB77;
   opacity: 0.5;
 }
 .body .experience__box-img img {
   width: 400px;
-  height: 400px;
 }
 @media screen and (max-width: 500px) {
   .body .experience__box-img img {
     width: 300px;
-    height: 300px;
   }
+}
+.body .experience__box-txt {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 45px;
+  width: 100%;
+}
+.body .experience__box-txt_left {
+  padding-left: 48px;
+}
+.body .experience__box-txt-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.body .experience__box-txt-item-p {
+  margin-right: 5px;
+}
+.body .experience__box-txt-item p {
+  line-height: 30px;
+}
+.body .experience__box-txt-item p:nth-child(2) {
+  width: 85%;
 }
 .body .skill {
   width: 100%;
@@ -553,11 +582,6 @@ body, html {
   z-index: 10;
   margin: 50px auto !important;
 }
-@media screen and (max-width: 1200px) {
-  .body .skill .regular {
-    display: none;
-  }
-}
 .body .skill .slick-track {
   padding-bottom: 30px;
 }
@@ -565,8 +589,7 @@ body, html {
   margin: 0px 20px;
 }
 .body .skill .slick-slide img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
 }
 .body .skill .slick-prev:before,
 .body .skill .slick-next:before {
@@ -581,6 +604,13 @@ body, html {
 }
 .body .skill .slick-current {
   opacity: 1;
+}
+.body .skill__photo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 20px 0;
 }
 .body .works {
   position: relative;
@@ -599,7 +629,7 @@ body, html {
 }
 .body .works-list-box {
   background: #fff;
-  border-bottom: 2px solid #0089A7;
+  border-bottom: 2px solid #FFBB77;
   position: relative;
   width: 500px;
   margin: 0 20px;
@@ -643,7 +673,7 @@ body, html {
 }
 .body .works-list-box .works-list-item .text-box-txt {
   font-size: 15px;
-  color: #0089A7;
+  color: #FFBB77;
   line-height: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -797,7 +827,7 @@ body, html {
   height: 50px;
   border: 0px;
   border-radius: 6px;
-  background-color: #0089A7;
+  background-color: #FFBB77;
   color: #fff;
   font-size: 18px;
   cursor: pointer;
@@ -805,7 +835,7 @@ body, html {
 
 .footer {
   width: calc(100% - 100px);
-  background-color: #0089A7;
+  background-color: #FFBB77;
   padding: 50px 50px;
 }
 .footer-title {
@@ -916,7 +946,7 @@ body, html {
   height: 3px;
   left: 50%;
   margin-left: -30px;
-  background: #0089A7;
+  background: #FFBB77;
 }
 .title__txt_big:after {
   content: "";

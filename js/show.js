@@ -93,8 +93,9 @@ $(document).ready(function() {
   $('.regular').slick({
     dots: true,
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
   });
 
   window.setInterval(() => {

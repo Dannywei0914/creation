@@ -35,7 +35,7 @@ body, html {
     }
 
     &_bgcolor {
-      background-color: #0089A7;
+      background-color: #FFBB77;
     }
 
     &-logo {
@@ -135,7 +135,7 @@ body, html {
       &__list {
         width: 200px;
         height: 100%;
-        background-color: #0089A7;
+        background-color: #FFBB77;
         text-align: center;
         padding-top: 50px;
         position: fixed;
@@ -214,7 +214,7 @@ body, html {
         right: 0;
         animation: start 1s linear 1 both;
         animation-timing-function: ease-in;
-        background-color: #0089A7;
+        background-color: #FFBB77;
       }
   
       &__txt {
@@ -270,7 +270,7 @@ body, html {
       }
   
       .img-1 {
-        background-image: url(../images/life/IMG9527.jpg);
+        background-image: url(../images/life/LINE_ALBUM_230217_0.jpg);
       }
   
       .img-2 {
@@ -357,7 +357,10 @@ body, html {
       @include flex-c;
 
       @include screen(laptop) {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       &-content {
@@ -411,7 +414,7 @@ body, html {
           position: absolute;
           right: -28px;
           top: -28px;
-          border: 6px solid #0089A7;
+          border: 6px solid #FFBB77;
           opacity: .5;
         }
     
@@ -422,7 +425,7 @@ body, html {
           position: absolute;
           left: -28px;
           bottom: -28px;
-          border: 6px solid #0089A7;
+          border: 6px solid #FFBB77;
           opacity: .5;
         }
     
@@ -459,7 +462,10 @@ body, html {
       @include flex-c;
 
       @include screen(laptop) {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       &-content {
@@ -509,10 +515,8 @@ body, html {
         display: block;
         position: relative;
         opacity: 0;
-        transition: .6s;
         width: 400px;
-        height: 400px;
-        margin: 30px auto;
+        transition: .6s;
         @include screen(mobile) {
           width: 300px;
           height: 300px;
@@ -525,7 +529,7 @@ body, html {
           position: absolute;
           right: -28px;
           top: -28px;
-          border: 6px solid #0089A7;
+          border: 6px solid #FFBB77;
           opacity: .5;
         }
     
@@ -536,19 +540,50 @@ body, html {
           position: absolute;
           left: -28px;
           bottom: -28px;
-          border: 6px solid #0089A7;
+          border: 6px solid #FFBB77;
           opacity: .5;
         }
     
         img {
           width: 400px;
-          height: 400px;
           @include screen(mobile) {
             width: 300px;
-            height: 300px;
           }
         }
       }
+      
+      &-txt {
+        font-size: 16px;
+        @include flex-al-start;
+        flex-direction: column;
+        margin-right: 45px;
+        width: 100%;
+
+        &_left {
+          padding-left: 48px;
+        }
+
+        &-item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%;
+
+          &-p {
+            margin-right: 5px;
+          }
+
+          p {
+            line-height: 30px;
+
+            &:nth-child(2) {
+              width:85%
+            }
+          }
+        }
+      }
+
+
     }
   }
 
@@ -592,9 +627,9 @@ body, html {
       z-index: 10;
       margin: 50px auto !important;
   
-      @include screen(laptop) {
-        display: none;
-      }
+      // @include screen(laptop) {
+      //   display: none;
+      // }
     }
     
     .slick-track {
@@ -606,8 +641,7 @@ body, html {
     }
     
     .slick-slide img {
-      width: 100px;
-      height: 100px;
+      width: 100%;
     }
     
     .slick-prev:before,
@@ -628,6 +662,14 @@ body, html {
     .slick-current {
       opacity: 1;
     }
+
+    &__photo {
+      &-title {
+        @include flex-c;
+        font-size: 30px;
+        margin: 20px 0;
+      }
+    }
   }
 
   .works {
@@ -646,7 +688,7 @@ body, html {
   
       &-box {
         background: #fff;
-        border-bottom: 2px solid #0089A7;
+        border-bottom: 2px solid #FFBB77;
         position: relative;
         width: 500px;
         margin: 0 20px;
@@ -690,7 +732,7 @@ body, html {
   
             &-txt {
               font-size: 15px;
-              color: #0089A7;
+              color: #FFBB77;
               line-height: 18px;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -870,7 +912,7 @@ body, html {
         height: 50px;
         border: 0px;
         border-radius: 6px;
-        background-color: #0089A7;
+        background-color: #FFBB77;
         color: #fff;
         font-size: 18px;
         cursor: pointer;
@@ -881,7 +923,7 @@ body, html {
 
 .footer {
   width: calc(100% - 100px);
-  background-color: #0089A7;
+  background-color: #FFBB77;
   padding: 50px 50px;
 
   &-title {
@@ -1004,7 +1046,7 @@ body, html {
         height: 3px;
         left: 50%;
         margin-left: -30px;
-        background: #0089A7;
+        background: #FFBB77;
       }
 
       &:after {
